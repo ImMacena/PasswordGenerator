@@ -17,8 +17,11 @@ function generatePassword() {
     for(i = 0, n = charset.length; i < sliderElement.value; i++) {
         pass += charset.charAt(Math.floor(Math.random() * n));
     }
-
     novaSenha = pass;
+}
+
+function printPassword() {
+    generatePassword()
     password.innerHTML = novaSenha;
     passwordContainer.classList.remove('hide');
 }
